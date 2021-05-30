@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>서울대학교</title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      li{
+        list-style:none;
+      }
+      a{
+        text-decoration:none;
+        color:#333;
+      }
+      #wrap{
+        width:1920px;
+        margin:0 auto;
+        text-align:center;
+        /* background: yellow; */
+      }
+      .container{
+        width:1400px;
+        margin:0 auto;
+        position:relative;
+        /* background: red; */
+      }
+
+      section.one{
+        width:1920px;
+        height: 760px;
+        position: relative;
+      }
+      #slide{
+        width:1920px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
+      .slidelist{
+        position: relative;
+        width:1920px;
+      }
+      .slideimg1{
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+      .slideimg2{
+        position: absolute;
+        top:0;
+        left: 0;
+        display: none;
+      }
+      .slideimg3{
+        position: absolute;
+        top:0;
+        left: 0;
+        display: none;
+      }
+      .slideimg4{
+        position: absolute;
+        top:0;
+        left: 0;
+        display: none;
+      }
+      .changeSB{
+        width: 378px;
+        height: 343px;
+        background: rgba(0, 51, 128,0.45);
+        position: relative;
+        top: 410px;
+        left: 260px;
+        z-index: 5;
+      }
+      .changeSB img{
+        cursor: pointer;
+      }
+      img.su1 {
+        position: absolute;
+        top:459px;
+        left: 351px;
+        z-index: 12;
+      }
+      img.su2 {
+        position: absolute;
+        top:459px;
+        left: 336px;
+        z-index: 12;
+      }
+      img.su3 {
+        position: absolute;
+        top:459px;
+        left: 304px;
+        z-index: 12;
+      }
+      img.su4 {
+        position: absolute;
+        top:459px;
+        left: 300px;
+        z-index: 12;
+      }
+      .one1{
+        position: absolute;
+        top: 310px;
+        left: 151px;
+      }
+      .two1{
+        position: absolute;
+        top: 310px;
+        left: 171px;
+      }
+      .three1{
+        position: absolute;
+        top: 310px;
+        left: 191px;
+      }
+      .four1{
+        position: absolute;
+        top: 310px;
+        left: 211px;
+      }
+
+      /* section.three{
+        width:1920px;
+        height:805px;
+      }
+      section.three img{
+        width:1920px;
+        height:100%;
+      } */
+      .sticky{
+        top:0;
+        position: fixed;
+      }
+      .logo{
+        position: relative;
+        top:-30px;
+        transform: scale(1);
+        transition: 1s;
+      }
+      .logo.on{
+        transform: scale(0.6);
+        transition: 1s;
+      }
+      .sub_back.on{
+        top:86px
+      }
+      .QBtn{
+        position: fixed;
+        top:300px;
+        left:1750px;
+        width: 160px;
+        height: 120px;
+        /* background: rgba(255, 255, 255, 0.4); */
+        z-index: 111;
+      }
+      .mainBtn{
+        /* background: red; */
+        /* position: absolute; */
+        position: relative;
+        width: 100%;
+        height: 20%;
+      }
+      .newsBtn{
+        /* background: orange; */
+        position: relative;
+        width: 100%;
+        height: 20%;
+      }
+      .noticeBtn{
+        /* background: yellow; */
+        position: relative;
+        width: 100%;
+        height: 20%;
+      }
+      .majorBtn{
+        /* background: green; */
+        position: relative;
+        width: 100%;
+        height: 20%;
+      }
+      .quickBtn{
+        /* background: blue; */
+        position: relative;
+        width: 100%;
+        height: 20%;
+      }
+      .imgB{
+        /* position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%); */
+      }
+      .B1{
+        float: left;
+        width: 50%;
+        height: 100%;
+      }
+      .B2{
+        float: left;
+        width: 25%;
+        height: 100%;
+        /* background: red; */
+      }
+      .B2 img{
+        padding-bottom: 2px;
+      }
+      div.B3{
+        float: left;
+        width: 25%;
+        height: 100%;
+        /* background: red; */
+        position: relative;
+      }
+      div.B3 > span.line{
+        position: absolute;
+        top: 39.8%;
+        left: -60%;
+        width:100%;
+        height:100%;
+        display:block;
+        box-sizing: border-box;
+      }
+      .B3 span.line:before{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:2px;
+        background: darkslateblue;
+        animation: Btnmove 2s linear infinite;
+      }
+      @keyframes Btnmove {
+        0%{
+          transform-origin:left;
+          transform: scaleX(0);
+        }
+        50%{
+          transform-origin:left;
+          transform: scaleX(1);
+        }
+        50.1%{
+          transform-origin:right;
+          transform: scaleX(1);
+        }
+        100%{
+          transform-origin:right;
+          transform: scaleX(0);
+        }
+      }
+      .hei{
+        width: 1920px;
+        height: 90px;
+      }
+      .bbbb{
+        width:1920px;
+        height: 100px;
+      }
+      .aaaa{
+        width:1920px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/news.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/footer.js"></script>
+    <script src="script/news.js"></script>
+    <script type="text/javascript" src="script/homepage.js"></script>
+    <link rel="stylesheet" href="style/homepage.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+    $( document ).ready( function() {
+      var jb1 = $( '#1' ).offset();
+      var jb2 = $( '#2' ).offset();
+      var jb3 = $( '#3' ).offset();
+      var jb4 = $( '#4' ).offset();
+      var jb5 = $( '#5' ).offset();
+      console.log(jb1);
+      console.log(jb2);
+      console.log(jb3);
+      console.log(jb4);
+      console.log(jb5);
+
+
+      $('.btn').click(function(){
+          let index = $(this).index();
+
+          let b2 = $('.btn').eq(index).find('.B2 img');
+
+          let b2Attr = b2.attr('src');
+
+          $(this).find('.B2 img').attr('src', 'images/dongle2_1.png');
+          $(this).siblings().find('.B2 img').attr('src', 'images/dongle1_1.png');
+          $(this).find(".B3 span").addClass("line");
+          $(this).siblings().find(".B3 span").removeClass("line");
+      });
+
+      var wind = $(window),
+      head = $('header'),
+      headerOffsetTop = head.offset().top;
+      // var target = $(".target")
+  wind.scroll(function(){
+
+    if($(this).scrollTop() > headerOffsetTop){
+      head.addClass('sticky');
+      $(".logo").addClass("on");
+      $(".sub_back").addClass("on");
+      $(".header").addClass("hei");
+    } else {
+      head.removeClass('sticky');
+      $(".logo").removeClass("on");
+      $(".sub_back").removeClass("on");
+      $(".header").removeClass("hei");
+    }
+
+    if ($(document).scrollTop()<650) {
+      $(".mainBtn.btn").find('.B2 img').attr('src', 'images/dongle2_1.png');
+      $(".newsBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".noticeBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".majorBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".quickBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+
+      $(".mainBtn.btn").find(".B3 span").addClass("line");
+      $(".newsBtn.btn").find(".B3 span").removeClass("line");
+      $(".noticeBtn.btn").find(".B3 span").removeClass("line");
+      $(".majorBtn.btn").find(".B3 span").removeClass("line");
+      $(".quickBtn.btn").find(".B3 span").removeClass("line");
+    }
+    else if($(document).scrollTop()<1600){
+      $(".mainBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".newsBtn.btn").find('.B2 img').attr('src', 'images/dongle2_1.png');
+      $(".noticeBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".majorBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".quickBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+
+      $(".mainBtn.btn").find(".B3 span").removeClass("line");
+      $(".newsBtn.btn").find(".B3 span").addClass("line");
+      $(".noticeBtn.btn").find(".B3 span").removeClass("line");
+      $(".majorBtn.btn").find(".B3 span").removeClass("line");
+      $(".quickBtn.btn").find(".B3 span").removeClass("line");
+    }
+    else if($(document).scrollTop()<2000){
+      $(".mainBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".newsBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".noticeBtn.btn").find('.B2 img').attr('src', 'images/dongle2_1.png');
+      $(".majorBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".quickBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+
+      $(".mainBtn.btn").find(".B3 span").removeClass("line");
+      $(".newsBtn.btn").find(".B3 span").removeClass("line");
+      $(".noticeBtn.btn").find(".B3 span").addClass("line");
+      $(".majorBtn.btn").find(".B3 span").removeClass("line");
+      $(".quickBtn.btn").find(".B3 span").removeClass("line");
+    }
+    else if($(document).scrollTop()<2800){
+      $(".mainBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".newsBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".noticeBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".majorBtn.btn").find('.B2 img').attr('src', 'images/dongle2_1.png');
+      $(".quickBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+
+      $(".mainBtn.btn").find(".B3 span").removeClass("line");
+      $(".newsBtn.btn").find(".B3 span").removeClass("line");
+      $(".noticeBtn.btn").find(".B3 span").removeClass("line");
+      $(".majorBtn.btn").find(".B3 span").addClass("line");
+      $(".quickBtn.btn").find(".B3 span").removeClass("line");
+    }
+    else if($(document).scrollTop()<3200){
+      $(".mainBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".newsBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".noticeBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".majorBtn.btn").find('.B2 img').attr('src', 'images/dongle1_1.png');
+      $(".quickBtn.btn").find('.B2 img').attr('src', 'images/dongle2_1.png');
+
+      $(".mainBtn.btn").find(".B3 span").removeClass("line");
+      $(".newsBtn.btn").find(".B3 span").removeClass("line");
+      $(".noticeBtn.btn").find(".B3 span").removeClass("line");
+      $(".majorBtn.btn").find(".B3 span").removeClass("line");
+      $(".quickBtn.btn").find(".B3 span").addClass("line");
+    }
+});
+
+});
+    </script>
+
+  </head>
+
+  <body>
+  <div id="wrap">
+    <div id="1" class="header_top target"><p class="hone">Global Leading University ‘SNU’</p> <p class="htwo"><a href="#">HOME</a> | <a href="#">SITEMAP</a> | <a href="#">ENGLISH</a></p> </div>
+    <div class="QBtn">
+      <div class="mainBtn btn">
+        <a href="#1">
+        <div class="B1">
+          <img src="images/main4.png" alt="" class="imgB">
+        </div>
+        <div class="B2">
+          <img src="images/dongle2_1.png" alt="" class="imgB">
+        </div>
+        <div class="B3">
+          <span class="line"></span>
+        </div>
+        </a>
+      </div>
+      <div class="newsBtn btn">
+        <a href="#2">
+        <div class="B1">
+          <img src="images/news4.png" alt="" class="imgB">
+        </div>
+        <div class="B2">
+          <img src="images/dongle1_1.png" alt="" class="imgB2">
+        </div>
+        <div class="B3">
+          <span></span>
+        </div>
+      </div>
+      </a>
+      <div class="noticeBtn btn">
+        <a href="#3">
+        <div class="B1">
+          <img src="images/notice4.png" alt="" class="imgB">
+        </div>
+        <div class="B2">
+          <img src="images/dongle1_1.png" alt="" class="imgB2">
+        </div>
+        <div class="B3">
+          <span></span>
+        </div>
+        </a>
+      </div>
+      <div class="majorBtn btn">
+        <a href="#4">
+        <div class="B1">
+          <img src="images/major3.png" alt="" class="imgB">
+        </div>
+        <div class="B2">
+          <img src="images/dongle1_1.png" alt="" class="imgB2">
+        </div>
+        <div class="B3">
+          <span></span>
+        </div>
+        </a>
+      </div>
+      <div class="quickBtn btn">
+        <a href="#5">
+        <div class="B1">
+          <img src="images/quick4.png" alt="" class="imgB">
+        </div>
+        <div class="B2">
+          <img src="images/dongle1_1.png" alt="" class="imgB2">
+        </div>
+        <div class="B3">
+          <span></span>
+        </div>
+        </a>
+      </div>
+    </div>
+    <div class="header"></div>
+    <header>
+      <div class="container">
+        <ul class="nav">
+          <li><a href="린서브/subindex.html">대학소개</a><ul class="submenu">
+            <li><a href="린서브/subindex.html">서울대 소개</a></li>
+            <li><a href="#!">캠퍼스 소개</a></li>
+            <li><a href="#!">조직도 및 연락처</a></li>
+            <li><a href="#!">학칙 및 규정</a></li>
+          </ul> </li>
+          <li><a href="지운서브/index.html">입학</a><ul class="submenu">
+            <li><a href="지운서브/index.html">공지사항</a></li>
+            <li><a href="#!">대학원 입학</a></li>
+            <li><a href="#!">입학 자료실</a></li>
+            <li><a href="#!">대학입학 수시모집</a></li>
+            <li><a href="#!">대학입학 정시모집</a></li>
+            <li><a href="#!">편입학</a></li>
+          </ul> </li>
+          <li><a href="#!">교육</a><ul class="submenu">
+            <li><a href="#!">대학/대학원</a></li>
+            <li><a href="#!">교육 사원</a></li>
+            <li><a href="#!">교직원 행정</a></li>
+            <li><a href="#!">교과 과정</a></li>
+            <li><a href="#!">학사 행정</a></li>
+          </ul> </li>
+          <li><a href="index.html"> <img src="images/seoullogo2.png" alt="" class="logo"></a><ul class="submenu">
+
+              <li class="sub_color">
+                <img src="images/glu2.png" alt="" class="glu">
+                <!-- <p>GLOBAL</p>
+                <p>LEADING</p>
+                <p>UNIVERSITY</p> -->
+              </li>
+
+          </ul> </li>
+          <li><a href="#!">연구</a><ul class="submenu">
+            <li><a href="#!">연구성과</a></li>
+            <li><a href="#!">연구지원</a></li>
+            <li><a href="#!">연구현황</a></li>
+            <li><a href="#!">연구기관</a></li>
+          </ul> </li>
+          <li><a href="#!">대학생활</a><ul class="submenu">
+            <li><a href="#!">학생지원</a></li>
+            <li><a href="#!">장학금 안내</a></li>
+            <li><a href="찬웅서브/subindex2.html">커뮤니티</a></li>
+            <li><a href="#!">자유게시판</a></li>
+          </ul> </li>
+          <li><a href="#!">WITH SNU</a><ul class="submenu">
+            <li><a href="#!">서울대 소식</a></li>
+            <li><a href="#!">SNU미디어</a></li>
+            <li><a href="#!">사회봉사</a></li>
+            <li><a href="#!">SNU AEARDS</a></li>
+          </ul> </li>
+        </ul>
+      </div>
+      <div class="sub_back"></div>
+    </header>
+    <!-- <div class="header"></div> -->
+    <section class="one">
+      <div id="slide">
+        <div class="slidelist">
+          <div class="slideimg1">
+            <a href="#"><img src="images/slide2.png" alt=""></a>
+              <img src="images/font1.png" alt="" class="su1">
+          </div>
+
+          <div class="slideimg2">
+            <a href="#"><img src="images/slide1.png" alt=""></a>
+            <img src="images/font3.png" alt="" class="su2">
+          </div>
+          <div class="slideimg3">
+            <a href="#"><img src="images/slide3.png" alt=""></a>
+            <img src="images/font2.png" alt="" class="su3">
+          </div>
+          <div class="slideimg4">
+            <a href="#"><img src="images/slide4.png" alt=""></a>
+            <img src="images/font4.png" alt="" class="su4">
+          </div>
+        </div>
+      </div>
+      <div class="changeSB">
+        <div class="one1"><img src="images/circle1_2.png" alt=""></div>
+        <!-- <div class="one2"><a href="#"><img src="images/circle2.png" alt=""> </a> </div> -->
+        <div class="two1"><img src="images/circle2_1.png" alt=""></div>
+        <!-- <div class="two2"><a href="#"><img src="images/circle2.png" alt=""> </a> </div> -->
+        <div class="three1"><img src="images/circle3_1.png" alt=""></div>
+        <!-- <div class="three2"><a href="#"><img src="images/circle2.png" alt=""> </a> </div> -->
+        <div class="four1"><img src="images/circle4_1.png" alt=""></div>
+        <!-- <div class="four2"><a href="#"><img src="images/circle2.png" alt=""> </a> </div> -->
+      </div>
+    </section>
+    <div id="2" class="bbbb target"></div>
+    <div class="news">
+      <div class="r_arrow"><img src="images/R_arrow2.png" alt="오른쪽"></div>
+      <div class="l_arrow"><img src="images/L_arrow2.png" alt="왼쪽"></div>
+      <div class="tit"><h2><img src="images/news.png" alt="뉴스 로고"></h2></div>
+      <div class="containar">
+      <div class="news_imglist">
+        <ul>
+          <li>
+            <img src="images/1.png" alt="뉴스1">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제69회 전기 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 2015년도 새내기 대학</h3>
+                <h3>- 사회과학대학 교수학사협의회..</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="images/2.png" alt="뉴스2">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>해동학술정보실 개관식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 사회과학대학 홈페이지 새단장</h3>
+                <h3>- 독일 함부르크대와 국제 교류 협의..</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+          <a href="진수서브/news_sub2.html">  <img src="images/3.png" alt="뉴스3">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제67회 전기 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 2013학년도 새내기 클리닉</h3>
+                <h3>- 사회과학대학 교수학사협의회 및<br>　한일관계사 유적 답사..</h3>
+              </div>
+            </div>
+            </a>
+          </li>
+          <li>
+          <a href="진수서브/news_sub1.html">  <img src="images/4.png" alt="뉴스4">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제71회 전기 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 2016년 대학원생 우수논문상 시상식</h3>
+                <h3>- 2017년도 학과(부)별 신입생<br>　오리엔테이션 실시..</h3>
+              </div>
+            </div>
+            </a>
+          </li>
+          <li>
+            <img src="images/5.png" alt="뉴스5">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제68회 전기 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 사회과학대학 교수학사협의회</h3>
+                <h3>- 사회과학대학 조교학사업무협의회..</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+          <a href="진수서브/news_sub3.html">  <img src="images/6.png" alt="뉴스6">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제71회 전기 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- 2016년 대학원생 우수논문상 시상식</h3>
+                <h3>- 사회대 설립 40주년 기념 하토야마<br>　유키오 전 일본총리 특별강연..</h3>
+              </div>
+            </div>
+            </a>
+          </li>
+          <li>
+            <img src="images/7.png" alt="뉴스7">
+            <div class="overlay">
+              <div class="news_tit">
+                <h2>제68회 학위수여식</h2>
+              </div>
+              <div class="news_txt">
+                <h3>- IBK 커뮤니케이션센터 개관식</h3>
+                <h3>- 2014년 추석명절 어려운 이웃돕기 성금전달..</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div  id="3" class="aaaa target"></div>
+    <div class="notice">
+      <div class="tit1"><h2><img src="images/notice.png" alt="노티스 로고"></h2></div>
+      <img src="images/bg.jpg" alt="배경이미지">
+      <div class="opa20"></div>
+      <!-- NOTE: box1 -->
+      <div class="notice_box1">
+        <div class="notice_tit">
+          <h3>일반공지</h3><div class="tit_box"><a href="#!">더보기 +</a></div><hr>
+        </div>
+        <div class="notice_main">
+          <ul>
+            <li><a href="#!">서울대학교 언어교육원 2020년 봄학기 한국어 교..</a></li>
+            <li><a href="#!">	2019년도 서울대학교 청렴도 측정 결과 공개</a></li>
+            <li><a href="#!">2019년도 서울대학교 교육수요자 만족도 조사(학..</a></li>
+            <li><a href="#!">2020학년도 제1학기 특별수강생 선발계획</a></li>
+            <li><a href="#!">	학생 아이디어 공모전 '미래문화관, 문화관의 미래..</a></li>
+            <li><a href="#!">	서울대학교 융합과학기술대학원 DYROS 로봇스쿨</a></li>
+            <li><a href="#!">	서울대학교 DYROS 로보틱스 부트캠프 안내</a></li>
+          </ul>
+        </div>
+        <div class="notice_search">
+          <div class="search_option">
+            <select class="notice_select">
+              <option>제목</option>
+              <option>내용</option>
+            </select>
+          </div>
+          <div class="search_txt">
+            <input type="text" title="검색" placeholder="내용을 입력하세요">
+          </div>
+          <div class="search_enter">
+            <button type="button" name="button">검색</button>
+          </div>
+        </div>
+      </div>
+      <!-- NOTE: box2 -->
+      <div class="notice_box2">
+        <div class="notice_tit">
+          <h3>행사안내</h3><div class="tit_box"><a href="#!">더보기 +</a></div><hr>
+        </div>
+        <div class="notice_main">
+          <ul>
+            <li><a href="#!">	2019 규장각 창립기념 특별전시회</a></li>
+            <li><a href="#!">	제12회 국가정책포럼: 다가온 인구위기, 어떻게 대..</a></li>
+            <li><a href="#!">	제11회 국가정책포럼: 대학의 미래, 서울대의 성찰</a></li>
+            <li><a href="#!">	[외국인 정책 포럼] 이민정보원 설립 필요성과 구성..</a></li>
+            <li><a href="#!">	[2019 북한 사회변동과 주민의식] 자력강생의 명암</a></li>
+            <li><a href="#!">	[BLIRC] 제3회 생체지질인터액토믹스 심포지엄 개최..</a></li>
+            <li><a href="#!">	[2019 통일의식조사 발표] 다가오는 한반도 평화, ..</a></li>
+          </ul>
+        </div>
+        <div class="notice_search">
+          <div class="search_option">
+            <select class="notice_select">
+              <option>제목</option>
+              <option>내용</option>
+            </select>
+          </div>
+          <div class="search_txt">
+            <input type="text" title="검색" placeholder="내용을 입력하세요">
+          </div>
+          <div class="search_enter">
+            <button type="button" name="button">검색</button>
+          </div>
+        </div>
+      </div>
+      <!-- NOTE: box3 -->
+      <div class="notice_box3">
+        <div class="notice_tit">
+          <h3>학사일정</h3><div class="tit_box"><a href="#!">전체보기 +</a></div><hr>
+        </div>
+        <div class="notice_main">
+          <ul>
+            <li><h2>1월</h2><div class="notice_show 1mon">보기</div></li>
+            <li><h2>2월</h2><div class="notice_show 2mon">보기</div></li>
+            <li><h2>3월</h2><div class="notice_show 3mon">보기</div></li>
+            <li><h2>4월</h2><div class="notice_show 4mon">보기</div></li>
+            <li><h2>5월</h2><div class="notice_show 5mon">보기</div></li>
+            <li><h2>6월</h2><div class="notice_show 6mon">보기</div></li>
+            <li><h2>7월</h2><div class="notice_show 7mon">보기</div></li>
+            <li><h2>8월</h2><div class="notice_show 8mon">보기</div></li>
+            <li><h2>9월</h2><div class="notice_show 9mon">보기</div></li>
+            <li><h2>10월</h2><div class="notice_show 10mon">보기</div></li>
+            <li><h2>11월</h2><div class="notice_show 11mon">보기</div></li>
+            <li><h2>12월</h2><div class="notice_show 12mon">보기</div></li>
+            <div class="notice_popup1 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">1. 7.(목)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 수강신청<br>　취소 마감(1/2선)</div>
+                </li>
+                <li>
+                  <div class="popup_day">1.11.(월) ~ 1.15.(금)</div>
+                  <div class="popup_txt">ㆍ2020학년도 전과 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">1.22.(금)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 종강</div>
+                </li>
+                <li>
+                  <div class="popup_day">1.28.(목) ~ 2. 3.(수)</div>
+                  <div class="popup_txt">ㆍ2020학년도 제1학기<br>　수강신청 (08:30 ~ 16:00)</div>
+                </li>
+                <li>
+                  <div class="popup_day">1.29(금)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 성적제출 마감</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup2 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">2. 1.(월) ~ 2. 5.(금)</div>
+                  <div class="popup_txt">ㆍ2020학년도 대학원<br>　전기모집 신입생 등록</div>
+                </li>
+                <li>
+                  <div class="popup_day">2. 2.(화) ~ 2. 4.(목)</div>
+                  <div class="popup_txt">ㆍ2020학년도 학부<br>　신입생 등록</div>
+                </li>
+                <li>
+                  <div class="popup_day">2.19.(금) ~ 2.25.(목)</div>
+                  <div class="popup_txt">ㆍ2020학년도 제1학기<br>　재학생 등록</div>
+                </li>
+                <li>
+                  <div class="popup_day">2.26.(금)</div>
+                  <div class="popup_txt">ㆍ전기 학위수여식</div>
+                </li>
+                <li>
+                  <div class="popup_day">2.26.(금)</div>
+                  <div class="popup_txt">	ㆍ제2학기 종료, 동계휴가 종료</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup3 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">3. 1.(일)</div>
+                  <div class="popup_txt">ㆍ제1학기 시작</div>
+                </li>
+                <li>
+                  <div class="popup_day">3. 2.(월)</div>
+                  <div class="popup_txt">ㆍ제1학기 개강, 입학식</div>
+                </li>
+                <li>
+                  <div class="popup_day">3. 2.(월) ~ 3. 6.(금)</div>
+                  <div class="popup_txt">ㆍ제1학기 수강신청 변경</div>
+                </li>
+                <li>
+                  <div class="popup_day">3. 9.(월) ~ 3.20.(금)</div>
+                  <div class="popup_txt">	ㆍ제2학기 개설교과목 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">3.25.(수)</div>
+                  <div class="popup_txt">	ㆍ수업일수 1/4선</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup4 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">4. 6.(월) ~ 4.10.(금)</div>
+                  <div class="popup_txt">	ㆍ제2학기 복수전공, 연합전공<br>　신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">4.20(월) ~ 4.24.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 부전공, 연계전공,<br>　학생설계전공 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">4.21.(화)</div>
+                  <div class="popup_txt">ㆍ제1학기 수강신청 취소 마감,<br>　수업일수 2/4선</div>
+                </li>
+                <li>
+                  <div class="popup_day">4.23.(목) ~ 4.24.(금)</div>
+                  <div class="popup_txt">ㆍ제1학기 자율학습일</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup5 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">	5. 7.(목) ~ 5.13.(수)</div>
+                  <div class="popup_txt">	ㆍ하계 계절수업 수강신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">5.19.(화)</div>
+                  <div class="popup_txt">ㆍ수업일수 3/4선</div>
+                </li>
+                <li>
+                  <div class="popup_day">5.25.(월) ~ 6.12.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 장학생 선정<br>　신청서 제출</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup6 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">6.12.(금)</div>
+                  <div class="popup_txt">ㆍ제1학기 종강</div>
+                </li>
+                <li>
+                  <div class="popup_day">6.13.(토)~ 6.19.(금)</div>
+                  <div class="popup_txt">ㆍ제1학기 보강기간</div>
+                </li>
+                <li>
+                  <div class="popup_day">6.15.(월) ~ 7.17.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 복적 및 재입학 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">6.15.(월) ~ 8.31.(월)</div>
+                  <div class="popup_txt">ㆍ제2학기 복학(귀) 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">6.26.(금)</div>
+                  <div class="popup_txt">	ㆍ제1학기 성적제출 마감</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup7 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">7.10.(금)</div>
+                  <div class="popup_txt">ㆍ하계 계절수업 수강신청<br>　취소 마감(1/2선)</div>
+                </li>
+                <li>
+                  <div class="popup_day">7.31.(금)</div>
+                  <div class="popup_txt">ㆍ하계 계절수업 종강</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup8 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">	8. 3.(월) ~ 8. 7.(금)</div>
+                  <div class="popup_txt">ㆍ2020학년도 대학원 후기모집<br>　신입생 등록</div>
+                </li>
+                <li>
+                  <div class="popup_day">8. 7.(금)</div>
+                  <div class="popup_txt">ㆍ하계 계절수업 성적제출 마감</div>
+                </li>
+                <li>
+                  <div class="popup_day">8.13.(목) ~ 8.19.(수)</div>
+                  <div class="popup_txt">ㆍ제2학기 수강신청<br>　(08:30 ~ 16:00)</div>
+                </li>
+                <li>
+                  <div class="popup_day">8.24.(월) ~ 8.28.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 재학생 등록</div>
+                </li>
+                <li>
+                  <div class="popup_day">8.31.(월)</div>
+                  <div class="popup_txt">ㆍ제1학기 종료, 하계휴가 종료</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup9 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">9. 1.(화)</div>
+                  <div class="popup_txt">ㆍ제2학기 개강</div>
+                </li>
+                <li>
+                  <div class="popup_day">9. 1.(화) ~ 9. 7.(월)</div>
+                  <div class="popup_txt">ㆍ제2학기 수강신청 변경</div>
+                </li>
+                <li>
+                  <div class="popup_day">9. 7.(월) ~ 9.11.(금)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 수요조사</div>
+                </li>
+                <li>
+                  <div class="popup_day">9.21.(월) ~ 9.25.(금)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 개설교과목<br>　신청</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup10 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">10.12(월) ~ 10.16(금)</div>
+                  <div class="popup_txt">ㆍ2021학년도 제1학기<br>　복수전공, 연합전공 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">10.26(월) ~ 10.30(금)</div>
+                  <div class="popup_txt">ㆍ2021학년도 제1학기 부전공,<br>　연계전공,학생설계전공 신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">10.29.(목) ~ 10.30.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 자율학습일</div>
+                </li>
+                <li>
+                  <div class="popup_day">10.26.(월)</div>
+                  <div class="popup_txt">ㆍ제2학기 수강신청 취소 마감,<br>　수업일수 2/4선</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup11 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">11. 5.(목) ~ 11.11.(수)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 수강신청</div>
+                </li>
+                <li>
+                  <div class="popup_day">11.19.(목)</div>
+                  <div class="popup_txt">ㆍ수업일수 3/4선</div>
+                </li>
+                <li>
+                  <div class="popup_day">11.23.(월) ~ 12.11.(금)</div>
+                  <div class="popup_txt">ㆍ2021학년도 제1학기 장학생<br>　선정 신청서 제출</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice_popup12 pop">
+              <ul>
+                <li>
+                  <div class="popup_day">12.11.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 종강</div>
+                </li>
+                <li>
+                  <div class="popup_day">12.12.(토) ~ 12.18.(금)</div>
+                  <div class="popup_txt">ㆍ제2학기 보강기간</div>
+                </li>
+                <li>
+                  <div class="popup_day">12.21.(월)</div>
+                  <div class="popup_txt">ㆍ동계휴가 시작</div>
+                </li>
+                <li>
+                  <div class="popup_day">12.21.(월)</div>
+                  <div class="popup_txt">ㆍ동계 계절수업 개강</div>
+                </li>
+                <li>
+                  <div class="popup_day">12.28.(월)</div>
+                  <div class="popup_txt">ㆍ제2학기 성적제출 마감</div>
+                </li>
+              </ul>
+            </div>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="4" class="wrap03 target">
+      <div class="back01">
+        <img src="images/back01.png" alt="back01_image">
+      </div>
+      <div class="back02">
+        <img src="images/back02.png" alt="back02_image">
+      </div>
+      <div class="img-back img01-back">
+        <img src="images/인문대back02.png" alt="img01_back_image">
+      </div>
+      <div class="img-back img02-back">
+        <img src="images/자과대back02.png" alt="img02_back_image">
+      </div>
+      <div class="img-back img03-back">
+        <img src="images/농대back02.png" alt="img03_back_image">
+      </div>
+      <div class="img-back img04-back">
+        <img src="images/공대back.png" alt="img04_back_image">
+      </div>
+      <div class="img-back img05-back">
+        <img src="images/경영대back.png" alt="img05_back_image">
+      </div>
+      <div class="img-back img06-back">
+        <img src="images/의대back.png" alt="img06_back_image">
+      </div>
+      <div class="img-back img07-back">
+        <img src="images/미대back.png" alt="img07_back_image">
+      </div>
+      <div class="img-back img08-back">
+        <img src="images/음대back.png" alt="img08_back_image">
+      </div>
+      <div class="img-back img09-back">
+        <img src="images/생과대back.png" alt="img09_back_image">
+      </div>
+
+      <div class="wrap02">
+        <a href="#!"><img src="images/R_arrow2.png" alt="rbtn_image" class="rbtn"></a>
+        <a href="#!"><img src="images/L_arrow2.png" alt="lbtn_image" class="lbtn"></a>
+
+      <div class="container02">
+        <h1><img src="images/titleb.png" alt="title_image"></h1>
+        <div class="slide">
+
+        <div class="slideList01">
+
+          <div class="slideImg img01">
+            <a href="#!"><img src="images/인문대03.png" alt="fineart_image"></a>
+          </div>
+          <div class="back-layer back_layer01">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close1">
+              <a href="#!"><img src="images/인문대hover.png" alt="img01_image" class="back-img1"></a>
+
+            <div class="text01">
+              <ul class="text01-left">
+                <li><a href="#">국어국문학과</a></li>
+                <li><a href="#">중어중문학과</a></li>
+                <li><a href="#">영어영문학과</a></li>
+                <li><a href="#">불어불문학과</a></li>
+              </ul>
+              <ul class="text01-center">
+                <li><a href="#">독어독문학과</a></li>
+                <li><a href="#">노어노문학과</a></li>
+                <li><a href="#">서어서문학과</a></li>
+                <li><a href="#">언어학과</a></li>
+                <li><a href="#">아시아언어문명학과</a></li>
+              </ul>
+              <ul class="text01-right">
+                <li><a href="#">동양사학과</a></li>
+                <li><a href="#">서양사학과</a></li>
+                <li><a href="#">고고미술사학과</a></li>
+                <li><a href="#">철학과</a></li>
+                <li><a href="#">종교학과</a></li>
+                <li><a href="#">미학과</a></li>
+              </ul>
+            </div><!-- NOTE: text01 -->
+          </div><!-- NOTE: .b01 -->
+
+          <div class="slideImg img02">
+            <img src="images/자과대04.png" alt="music_image">
+          </div>
+          <div class="back-layer back_layer02">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close2">
+              <a href="#!"><img src="images/자과대hover.png" alt="img02_image" class="back-img2"></a>
+
+            <div class="text02">
+              <ul class="text02-left">
+                <li><a href="#">수리과학부</a></li>
+                <li><a href="#">생명과학부</a></li>
+                <li><a href="#">지구환경과학부</a></li>
+                <li><a href="#">물리/천문학부</a></li>
+              </ul>
+              <ul class="text02-right">
+                <li><a href="#">화학부</a></li>
+                <li><a href="#">통계학과</a></li>
+                <li><a href="#">연계전공금융수학</a></li>
+                <li><a href="#">연계전공과학기술학</a></li>
+                <li><a href="#">연합전공계산과학</a></li>
+              </ul>
+            </div><!-- NOTE: text02 -->
+          </div><!-- NOTE: .b02 -->
+
+
+          <div class="slideImg img03">
+            <img src="images/농대04.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer03">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close3">
+              <a href="#!"><img src="images/농대hover.png" alt="img03_image" class="back-img3"></a>
+
+            <div class="text03">
+              <ul class="text03-left">
+                <li><a href="#">식물생산과학부</a></li>
+                <li><a href="#">산림과학부</a></li>
+                <li><a href="#">식품동물생명공학부</a></li>
+              </ul>
+              <ul class="text03-right">
+                <li><a href="#">응용생물화학부</a></li>
+                <li><a href="#">바이오시스템/소재학부</a></li>
+                <li><a href="#">조경/지역시스템공학부</a></li>
+                <li><a href="#">농경제사회학부</a></li>
+              </ul>
+            </div><!-- NOTE: text03 -->
+          </div><!-- NOTE: .b03 -->
+
+
+          <div class="slideImg img04">
+            <img src="images/공대03.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer04">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close4">
+              <a href="#!"><img src="images/공대hover.png" alt="img04_image" class="back-img4"></a>
+
+            <div class="text04">
+              <ul class="text04-right">
+                <li><a href="#">컴퓨터공학부</a></li>
+                <li><a href="#">화학생물공학부</a></li>
+                <li><a href="#">건축학과(건축과/건축공학과)</a></li>
+                <li><a href="#">산업공학과</a></li>
+              </ul>
+            </div><!-- NOTE: text04 -->
+          </div><!-- NOTE: .b04 -->
+
+          <div class="slideImg img05">
+            <img src="images/경영대03.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer05">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close5">
+              <a href="#!"><img src="images/경영대hover.png" alt="img05_image" class="back-img5"></a>
+
+            <div class="text05">
+              <ul class="text05-right">
+                <li><a href="#">경영대학과</a></li>
+              </ul>
+            </div><!-- NOTE: text05 -->
+          </div><!-- NOTE: .b05 -->
+
+
+          <div class="slideImg img06">
+            <img src="images/의대03.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer06">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close6">
+              <a href="#!"><img src="images/의대hover.png" alt="img06_image" class="back-img6"></a>
+
+            <div class="text06">
+              <ul class="text06-right">
+                <li><a href="#">의과대학</a></li>
+                <li><a href="#">수의과대학</a></li>
+                <li><a href="#">간호대학</a></li>
+                <li><a href="#">약학대학</a></li>
+              </ul>
+            </div><!-- NOTE: text06 -->
+          </div><!-- NOTE: .b06 -->
+
+
+          <div class="slideImg img07">
+            <img src="images/미대03.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer07">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close7">
+              <a href="#!"><img src="images/미대hover.png" alt="img07_image" class="back-img7"></a>
+
+            <div class="text07">
+              <ul class="text07-right">
+                <li><a href="#">동양화과</a></li>
+                <li><a href="#">서양화과</a></li>
+                <li><a href="#">조소과</a></li>
+                <li><a href="#">디자인학부 공예전공</a></li>
+                <li><a href="#">디자인학부 디자인전공</a></li>
+              </ul>
+            </div><!-- NOTE: text07 -->
+          </div><!-- NOTE: .b07 -->
+
+
+          <div class="slideImg img08">
+            <img src="images/음대03.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer08">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close8">
+              <a href="#!"><img src="images/음대hover.png" alt="img08_image" class="back-img8"></a>
+
+            <div class="text08">
+              <ul class="text08-right">
+                <li><a href="#">성악과</a></li>
+                <li><a href="#">작곡과</a></li>
+                <li><a href="#">기악과</a></li>
+                <li><a href="#">국악과</a></li>
+              </ul>
+            </div><!-- NOTE: text08 -->
+          </div><!-- NOTE: .b08 -->
+
+
+          <div class="slideImg img09">
+            <img src="images/생과대04.png" alt="humanecology_image">
+          </div>
+          <div class="back-layer back_layer09">
+            <img src="images/crossx.png" alt="close_btn_image" class="back-close back-close9">
+              <a href="#!"><img src="images/생과대hover02.png" alt="img09_image" class="back-img9"></a>
+
+            <div class="text09">
+              <ul class="text09-right">
+                <li><a href="#">소비자학과</a></li>
+                <li><a href="#">아동가족학과</a></li>
+                <li><a href="#">식품영양학과</a></li>
+                <li><a href="#">의류학과</a></li>
+              </ul>
+            </div><!-- NOTE: text09 -->
+          </div><!-- NOTE: .b09 -->
+
+
+        </div><!-- NOTE: slideList01 -->
+
+      </div><!-- NOTE: .slide -->
+
+      </div><!-- NOTE: .container -->
+
+    </div><!-- NOTE: .wrap02 -->
+  </div><!-- NOTE: #wrap02 -->
+
+  <section id="5" class="target four">
+    <div class="h_blue"></div>
+    <div class="fbg"></div>
+    <div class="blue"><img src="images/quick_m2.jpg" alt="">
+    <span class="a"><img src="images/f_menu.jpg" alt="" class="fm"></a> </span>
+  </div>
+    <footer>
+      <div class="container">
+        <div class="quick_menu">
+          <div class="quick_m1">
+            <div class="map_box">
+              <div class="mp">
+              <a href=".quick_menu2"><img src="images/map_1.png" alt=""></a>
+              <p>캠퍼스맵</p>
+              </div>
+            </div>
+            <div class="bus_box">
+              <div class="mp">
+              <a href="#"><img src="images/bus_1.png" alt=""></a>
+              <p>셔틀버스</p>
+              </div>
+            </div>
+            <div class="phone_box">
+              <div class="mp">
+              <a href="#"><img src="images/phone_1.png" alt=""></a>
+              <p>전화번호</p>
+              </div>
+            </div>
+          </div>
+          <div class="quick_m2">
+            <div class="food_box">
+              <div class="mp">
+              <a href="#"><img src="images/fork_1.png" alt=""></a>
+              <p>스누식단</p>
+              </div>
+            </div>
+            <div class="wifi_box">
+              <div class="mp">
+              <a href="#"><img src="images/wifi_1.png" alt=""></a>
+              <p>wifi안내</p>
+              </div>
+            </div>
+            <div class="gold_box">
+              <div class="mp">
+              <a href="#"><img src="images/donation1.png" alt=""></a>
+              <p>만만한기부</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quick_menu2">
+          <div class="block">
+            <div class="map1">
+              <img src="images/map1.png" alt="map">
+            </div>
+            <div class="map2">
+              <img src="images/map2.png" alt="map">
+            </div>
+            <div class="map3">
+              <img src="images/map3.png" alt="map">
+            </div>
+            <div class="map4">
+              <img src="images/map4.png" alt="map">
+            </div>
+            <div class="map5">
+              <img src="images/map5.png" alt="map">
+            </div>
+            <div class="map6">
+              <img src="images/map6.png" alt="map">
+            </div>
+            <div class="map7">
+              <img src="images/map7.png" alt="map">
+            </div>
+            <div class="map8">
+              <img src="images/map8.png" alt="map">
+            </div>
+            <div class="map9">
+              <img src="images/map9.png" alt="map">
+            </div>
+          </div>
+        </div>
+          <ul class="quick_menu2_2">
+            <img src="images/close_w.png" alt="" class="close">
+            <li><a href=".map1">경영대학</a></li>
+            <li><a href=".map2">공과대학</a></li>
+            <li><a href=".map3">농업생명과학대학</a></li>
+            <li><a href=".map4">미술대학</a></li>
+            <li><a href=".map5">생활과학대학</a></li>
+            <li><a href=".map6">음악대학</a></li>
+            <li><a href=".map7">의과대학</a></li>
+            <li><a href=".map8">인문대학</a></li>
+            <li><a href=".map9">자연과학대학</a></li>
+          </ul>
+        <div class="quick_menu3">
+            <img src="images/close_w.png" alt="" class="close2">
+          <table>
+            <tr>
+              <th>기관명</th><th>전화번호</th>
+            </tr>
+            <tr>
+              <td>캠퍼스 폴리스(8112)</td><td>02-880-8112</td>
+            </tr>
+            <tr>
+              <td>캠퍼스 폴리스(8119)</td><td>02-880-8119</td>
+            </tr>
+            <tr>
+              <td>전화번호 안내(관악)</td><td>02-880-5114</td>
+            </tr>
+            <tr>
+              <td>ITSC - IT서비스 상담</td><td>02-880-8282</td>
+            </tr>
+            <tr>
+              <td>중앙도서관</td><td>02-880-8001</td>
+            </tr>
+            <tr>
+              <td>대학생활문화원</td><td>02-880-5501</td>
+            </tr>
+            <tr>
+              <td>보건진료소</td><td>02-880-5338</td>
+            </tr>
+            <tr>
+              <td>SNU Call(24시간 상담)</td><td>02-880-8080</td>
+            </tr>
+          </table>
+        </div>
+        <div class="quick_menu4">
+          <div class="wifi">
+            <img src="images/close_w.png" alt="" class="close3">
+            <img src="images/phone.png" alt="" class="wifi_phone">
+            <img src="images/wifi_r.png" alt="" class="wifi_r">
+            <img src="images/snu_b.png" alt="" class="snu_b">
+
+            <h2 class="l">SNU WiFi</h2>
+            <br>
+            <p class="bb">이용자</p>
+            <p>-학내구성원, 방문자</p>
+            <br>
+            <p class="bb">사용방법</p>
+            <p class="bb bblue l">학내구성원</p>
+            <p class="l">① SNU-1st-time 선택 <br>② 브라우저 실행, 이용기기별 안내 확인 후 환경 설정 <br> ③ SNU_ID/ PW 으로 로그인 <br> ④ 이후 무선랜 목록 중 SNU-Member 이용 </p> <br>
+            <p class="bb bblue l">방문자</p>
+            <p class="l">① SNU-1st-time 선택 <br>② 임시 계정 생성(이용시간 제한 : 4시간)</p>
+          </div>
+        </div>
+        <div class="quick_menu5">
+          <img src="images/close_w.png" alt="" class="close4">
+          <div class="gibu">
+            <div class="gibu_overlay">
+              <p><a href="#!">자세히 보기 <div id="right" class="rbtn">
+                <a href="#!"><span></span><span></span><span></span></a>
+              </div></a></p>
+            </div>
+            <img src="images/gibu5.JPG" alt="">
+          </div>
+        </div>
+        <div class="quick_menu6">
+          <ul class="bustap_menu">
+            <li><a href=".bus1">셔틀버스노선</a></li>
+            <li><a href=".bus2">정류장</a></li>
+          </ul>
+          <img src="images/close_w.png" alt="" class="close4">
+          <div class="busblock">
+            <div class="bus1">
+              <div class="bus1_1">
+                <div class="busb">
+                  <img src="images/bus_o.png" alt="">
+                  <p class="b_f">정문 < - > 순환도로</p><p class="b_f2">08:00 ~ 18:00 (배차간격 6분)</p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">호암경유 역방향</p><p class="b_f2">(배차간격 10분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">행정관 -> 입구역 -> 행정관</p><p class="b_f2">07:00 ~ 19:00 (배차간격 5분 ~ 15분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">행정관 ~ 대학동</p><p class="b_f2">07:00 ~ 19:00 (배차간격 7분 ~ 15분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">입구역 ~ 2공학관</p><p class="b_f2">(배차간격 5분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">(야간)행정관 -> 입구역</p><p class="b_f2">21:10 ~ 23:10 (배차간격 30분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">(야간)행정관 -> 대학동</p><p class="b_f2">21:10 ~ 23:10 (배차간격 30분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">사당역 -> 행정관</p><p class="b_f2">08:00 ~ 11:00 (배차간격 30분)</p>
+                  <p></p>
+                </div>
+                <div class="busb">
+                  <img src="images/bus_gray.png" alt="">
+                    <p class="b_f">낙성대 -> 제1공학관</p><p class="b_f2">(배차간격 15분)</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="bus1_2">
+                <img src="images/bus_o.png" alt="" class="bi">
+                <p class="b_f3">교내</p>
+                <img src="images/bus_gray.png" alt="" class="bi2">
+                <p class="b_f4">통학</p>
+              </div>
+            </div>
+            <div class="bus2">
+              <div class="bus2_1">
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+
+                    <p class="b_f5">경영대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+
+                    <p class="b_f5">공과대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+                  <img src="images/bus_gray.png" alt="" class="b2_i3">
+                    <p class="b_f5">농업생명과학대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+
+                    <p class="b_f5">미술대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+
+                    <p class="b_f5">생활과학대학</p>
+
+                </div>
+                <div class="busb2">
+
+                  <img src="images/bus_g.png" alt="" class="b2_i1">
+                    <p class="b_f5">음악대학</p>
+
+                </div>
+                <div class="busb2">
+
+                  <img src="images/bus_g.png" alt="" class="b2_i1">
+                    <p class="b_f5">의과대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+
+                    <p class="b_f5">인문대학</p>
+
+                </div>
+                <div class="busb2">
+                  <img src="images/bus_o.png" alt="" class="b2_i1">
+                  <img src="images/bus_g.png" alt="" class="b2_i2">
+
+                    <p class="b_f5">자연과학대학</p>
+
+                </div>
+              </div>
+              <div class="bus2_2">
+                <img src="images/bus_o.png" alt="" class="bi3">
+                <p class="b_f7">교내</p>
+                <img src="images/bus_gray.png" alt="" class="bi4">
+                <p class="b_f8">통학</p>
+                <img src="images/bus_g.png" alt="" class="bi5">
+                <p class="b_f6">시내</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quick_menu7">
+          <img src="images/close_w.png" alt="" class="close4">
+          <ul class="foodtap">
+            <li><a href=".morning">아침</a></li>
+            <li><a href=".noon">점심</a></li>
+            <li><a href=".evening">저녁</a></li>
+          </ul>
+          <div class="foodblock">
+            <div class="morning">
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  학생회관식당</p>
+                <hr>
+                <p class="res_d">쇠고기무국 1,700원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  기숙사식당</p>
+                <hr>
+                <p class="res_d">제육숙주볶음 3,000원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_1.png" alt=""><p class="res_h2">  3식당</p>
+                <hr>
+                <p class="res_d2">"지금은 운영시간이 아닙니다."</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_1.png" alt=""><p class="res_h2">  4식당</p>
+                <hr>
+                <p class="res_d2">"지금은 운영시간이 아닙니다."</p>
+              </div>
+            </div>
+            <div class="noon">
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  학생회관식당</p>
+                <hr>
+                <p class="res_d">갈비구이 4,000원/ 두부짜장 1,700원/ 돌솥쇠고기육개장 3,000원 </p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  기숙사식당</p>
+                <hr>
+                <p class="res_d">쇠고기카레라이스 3,000원/ 안동식찜닭 4,000원/ 고추소스등심돈까스 4,000원/ 바지락칼국수 3,000원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  3식당</p>
+                <hr>
+                <p class="res_d">돈등뼈감자탕 4,500원/ 토마토스파게티&그릴소세지 4,000원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  4식당</p>
+                <hr>
+                <p class="res_d3">순살데리치킨 3,500원/ 특순대국밥 4,000원</p>
+              </div>
+            </div>
+            <div class="evening">
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  학생회관식당</p>
+                <hr>
+                <p class="res_d">제육덮밥 3,000원/ 쇠고기채소죽 1,700원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  기숙사식당</p>
+                <hr>
+                <p class="res_d">쌈정식 4,000원/ 우렁이된장찌개 4,000원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  3식당</p>
+                <hr>
+                <p class="res_d">돈코츠라멘&크림치즈고로케 4,500원</p>
+              </div>
+              <div class="res">
+                 <img src="images/fork_2.png" alt=""><p class="res_h">  4식당</p>
+                <hr>
+                <p class="res_d3">코코넛밀크새우커리 3,500원/ 바베큐립&볶음밥 5,500원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foot">
+        <a href="#"><img src="images/flogo.png" alt=""> </a>
+      </div>
+        <address>
+        <span class="a">정보공시 | 오시는 길 | 전화번호안내 | 등록금납부 | 서울대포털 | 교내홈페이지 | 클린행정센터</span>   <br>
+08826 서울시 관악구 관악로 1 서울대학교 | Tel. 02-880-5114 | Fax. 02-885-5272 <br>
+Copyright 2020 Seoul National University All Rights Reserved. [개인정보처리방침] [이메일무단수집거부]
+      </address>
+    </div>
+      </footer>
+  </section>
+
+
+  </div><!-- NOTE: #wrap -->
+
+  </body>
+</html>

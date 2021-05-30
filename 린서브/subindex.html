@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style/subpage.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/subpage.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      var wind = $(window),
+      head = $('header'),
+      headerOffsetTop = head.offset().top;
+      // var target = $(".target")
+  wind.scroll(function(){
+
+    if($(this).scrollTop() > headerOffsetTop){
+      head.addClass('sticky');
+      $(".logo").addClass("on");
+      $(".sub_back").addClass("on");
+      $(".header").addClass("hei");
+    } else {
+      head.removeClass('sticky');
+      $(".logo").removeClass("on");
+      $(".sub_back").removeClass("on");
+      $(".header").removeClass("hei");
+    }
+    });
+})
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+    <div id="1" class="header_top target"><p class="hone">Global Leading University ‘SNU’</p> <p class="htwo"><a href="#">HOME</a> | <a href="#">SITEMAP</a> | <a href="#">ENGLISH</a></p> </div>
+    <div class="header"></div>
+    <header>
+      <div class="container">
+        <ul class="nav">
+          <li><a href="subindex.html">대학소개</a><ul class="submenu">
+            <li><a href="subindex.html">서울대 소개</a></li>
+            <li><a href="#!">캠퍼스 소개</a></li>
+            <li><a href="#!">조직도 및 연락처</a></li>
+            <li><a href="#!">학칙 및 규정</a></li>
+          </ul> </li>
+          <li><a href="../지운서브/index.html">입학</a><ul class="submenu">
+            <li><a href="../지운서브/index.html">공지사항</a></li>
+            <li><a href="#!">대학원 입학</a></li>
+            <li><a href="#!">입학 자료실</a></li>
+            <li><a href="#!">대학입학 수시모집</a></li>
+            <li><a href="#!">대학입학 정시모집</a></li>
+            <li><a href="#!">편입학</a></li>
+          </ul> </li>
+          <li><a href="#!">교육</a><ul class="submenu">
+            <li><a href="#!">대학/대학원</a></li>
+            <li><a href="#!">교육 사원</a></li>
+            <li><a href="#!">교직원 행정</a></li>
+            <li><a href="#!">교과 과정</a></li>
+            <li><a href="#!">학사 행정</a></li>
+          </ul> </li>
+          <li><a href="../index.html"> <img src="images/seoullogo2.png" alt="" class="logo"></a><ul class="submenu">
+
+              <li class="sub_color">
+                <img src="images/glu2.png" alt="" class="glu">
+                <!-- <p>GLOBAL</p>
+                <p>LEADING</p>
+                <p>UNIVERSITY</p> -->
+              </li>
+
+          </ul> </li>
+          <li><a href="#!">연구</a><ul class="submenu">
+            <li><a href="#!">연구성과</a></li>
+            <li><a href="#!">연구지원</a></li>
+            <li><a href="#!">연구현황</a></li>
+            <li><a href="#!">연구기관</a></li>
+          </ul> </li>
+          <li><a href="#!">대학생활</a><ul class="submenu">
+            <li><a href="#!">학생지원</a></li>
+            <li><a href="#!">장학금 안내</a></li>
+            <li><a href="../찬웅서브/subindex2.html">커뮤니티</a></li>
+            <li><a href="#!">자유게시판</a></li>
+          </ul> </li>
+          <li><a href="#!">WITH SNU</a><ul class="submenu">
+            <li><a href="#!">서울대 소식</a></li>
+            <li><a href="#!">SNU미디어</a></li>
+            <li><a href="#!">사회봉사</a></li>
+            <li><a href="#!">SNU AEARDS</a></li>
+          </ul> </li>
+        </ul>
+      </div>
+      <div class="sub_back"></div>
+    </header>
+    <div class="imgBg"></div>
+    <div class="introduce">
+      <div class="container">
+        <div class="intnav">
+          <div class="yeoback2">
+            <h1>서울대소개</h1>
+          </div>
+          <ul class="subnav">
+            <li><a href="#!">서울대소개</a>
+              <ul class="Sensub">
+              <li><a href="#!">총장인사말</a></li>
+              <li><a href=".imgimg">상징</a></li>
+              <li><a href="#!">홍보영상</a></li>
+              <li><a href="#!">갤러리</a></li>
+            </ul>
+          </li>
+          <li><a href="#!">캠퍼스소개</a>
+            <ul class="Sensub">
+            <li><a href="#!">서브메뉴</a></li>
+            <li><a href="#!">서브메뉴</a></li>
+            <li><a href="#!">서브메뉴</a></li>
+            <li><a href="#!">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">조직도 및 연락처</a>
+          <ul class="Sensub">
+          <li><a href="#!">서브메뉴</a></li>
+          <li><a href="#!">서브메뉴</a></li>
+          <li><a href="#!">서브메뉴</a></li>
+          <li><a href="#!">서브메뉴</a></li>
+        </ul>
+      </li>
+      <li><a href="#!">학칙 및 규정</a>
+        <ul class="Sensub">
+        <li><a href="#!">서브메뉴</a></li>
+        <li><a href="#!">서브메뉴</a></li>
+        <li><a href="#!">서브메뉴</a></li>
+        <li><a href="#!">서브메뉴</a></li>
+      </ul>
+    </li>
+          </ul>
+        </div>
+        <div class="imgimg">
+          <div class="yeoback">
+            <p>HOME  >  대학소개  >  서울대소개  >  상징</p>
+            <ul class="seoul_taps">
+              <li><a href=".sucon1">UI</a></li>
+              <li><a href=".sucon2">교가</a></li>
+              <li><a href=".sucon3">정문</a></li>
+            </ul>
+          </div>
+          <div class="seoul_taps_block">
+            <div class="sucon1">
+              <img src="images/rin01.png" alt="">
+            </div>
+            <div class="sucon2">
+              <img src="images/rin02.png" alt="">
+            </div>
+            <div class="sucon3">
+              <img src="images/rin03.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+      <div class="foot">
+      <a href="#"><img src="images/flogo.png" alt=""> </a>
+    </div>
+      <address>
+      <span class="a">정보공시 | 오시는 길 | 전화번호안내 | 등록금납부 | 서울대포털 | 교내홈페이지 | 클린행정센터</span>   <br>
+08826 서울시 관악구 관악로 1 서울대학교 | Tel. 02-880-5114 | Fax. 02-885-5272 <br>
+Copyright 2020 Seoul National University All Rights Reserved. [개인정보처리방침] [이메일무단수집거부]
+    </address>
+  </div>
+    </footer>
+    </div>
+  </body>
+</html>
